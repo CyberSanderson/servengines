@@ -5,10 +5,19 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 
 const Testimonials = () => {
-  const sectionVariants: Variants = { /* ... */ };
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  };
 
   return (
-    <motion.section /* ... */ >
+    <motion.section
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="py-20 bg-white"
+    >
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-gray-800">Trusted by Businesses Like Yours</h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
