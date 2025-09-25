@@ -11,13 +11,13 @@ export default function TermsOfServicePage() {
     <div className="bg-white py-12">
       <div className="container mx-auto px-6 prose lg:prose-lg">
         <h1>Terms of Service</h1>
-        <p><em>Last Updated: September 24, 2025</em></p>
+        <p><em>Last Updated: September 25, 2025</em></p>
 
         <h2>1. Agreement to Terms</h2>
-        <p>By using our website, servengines.com (the "Site"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use the Site.</p>
+        <p>By using our website, servengines.com (the &quot;Site&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use the Site.</p>
 
         <h2>2. Intellectual Property Rights</h2>
-        <p>Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.</p>
+        <p>Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the &quot;Content&quot;) and the trademarks, service marks, and logos contained therein (the &quot;Marks&quot;) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.</p>
         
         <h2>3. User Representations</h2>
         <p>By using the Site, you represent and warrant that all registration information you submit will be true, accurate, current, and complete.</p>
