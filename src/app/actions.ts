@@ -1,4 +1,3 @@
-// src/app/actions.ts
 'use server';
 
 import { Resend } from 'resend';
@@ -7,9 +6,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: { name: string; email: string; message: string; }) => {
   try {
-    const { data, error } = await resend.emails.send({
-      from: 'sanderson@servengines.com', 
-      to: ['sanderson@servengines.com'], 
+    const response = await resend.emails.send({
+      from: 'sanderson@servengines.com',
+      to: ['sanderson@servengines.com'],
       subject: `New message from ${formData.name} via Servengines Contact Form`,
       replyTo: formData.email,
       html: `
@@ -21,13 +20,14 @@ export const sendEmail = async (formData: { name: string; email: string; message
       `,
     });
 
-    // THIS BLOCK IS CRUCIAL AND WAS LIKELY MISSING
-    if (error) {
-      return { error: error.message };
+    // If Resend API provides errors inside the response, handle them here
+    if ('error' in response && response.error) {
+      return { error: response.error.message || 'Unknown error' };
     }
 
-    return { success: true, data };
-  } catch (error) {
+    return { success: true, data: response };
+  } catch (err) {
+    console.error('Send email failed:', err); // optional: log the actual error
     return { error: 'Something went wrong on the server.' };
   }
 };
