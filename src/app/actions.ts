@@ -11,10 +11,7 @@ export const sendEmail = async (formData: { name: string; email: string; message
       from: 'sanderson@servengines.com', 
       to: ['sanderson@servengines.com'], 
       subject: `New message from ${formData.name} via Servengines Contact Form`,
-      
-      // THIS IS THE CORRECTED LINE
-      replyTo: formData.email, 
-
+      replyTo: formData.email,
       html: `
         <p>You have a new contact form submission:</p>
         <p><strong>Name:</strong> ${formData.name}</p>
@@ -24,6 +21,7 @@ export const sendEmail = async (formData: { name: string; email: string; message
       `,
     });
 
+    // THIS BLOCK IS CRUCIAL AND WAS LIKELY MISSING
     if (error) {
       return { error: error.message };
     }
