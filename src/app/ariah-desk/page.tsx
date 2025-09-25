@@ -21,7 +21,7 @@ export default function AriahDeskPage() {
       <section className="relative flex flex-col items-center justify-center min-h-[70vh] text-center text-white p-8 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=2070&auto=format&fit=crop"
+            src="/salon.png"
             alt="Elegant and modern salon interior"
             fill
             className="object-cover"
