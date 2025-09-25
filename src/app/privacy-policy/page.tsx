@@ -11,9 +11,11 @@ export default function PrivacyPolicyPage() {
     <div className="bg-white py-12">
       <div className="container mx-auto px-6 prose lg:prose-lg">
         <h1>Privacy Policy</h1>
-        <p><em>Last Updated: September 24, 2025</em></p>
+        <p><em>Last Updated: September 25, 2025</em></p>
         
-        <p>Servengines ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website servengines.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+        <p>Servengines (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website servengines.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the &quot;Site&quot;). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+
+        {/* ... rest of the content is fine ... */}
 
         <h2>Collection of Your Information</h2>
         <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes personal data, such as your name, email address, and message content, that you voluntarily give to us when you fill out our contact form.</p>
