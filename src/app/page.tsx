@@ -2,7 +2,6 @@
 'use client'; 
 
 import { motion, Variants } from 'framer-motion';
-// ... (all your component imports)
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import VisualFeature from '@/components/VisualFeature';
@@ -15,7 +14,6 @@ import CTA from '@/components/CTA';
 
 
 export default function Home() {
-  // 1. Define the animation variants WITHOUT viewport
   const sectionVariants: Variants = {
     initial: { opacity: 0, y: 50 },
     whileInView: { 
@@ -25,7 +23,6 @@ export default function Home() {
     },
   };
 
-  // 2. Define the viewport settings separately
   const sectionViewport = {
     once: true, 
     amount: 0.2 
@@ -35,7 +32,6 @@ export default function Home() {
     <main>
       <Hero />
       
-      {/* 3. Apply both variants and viewport as separate props */}
       <motion.div 
         variants={sectionVariants}
         initial="initial"
@@ -54,7 +50,16 @@ export default function Home() {
         <VisualFeature />
       </motion.div>
 
-      {/* ... Repeat for all other motion.div wrappers ... */}
+      {/* --- THIS SECTION WAS MISSING --- */}
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <HowItWorks />
+      </motion.div>
+      {/* --------------------------------- */}
       
       <Products />
 
