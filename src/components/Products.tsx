@@ -3,18 +3,33 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const Products = () => {
-  const sectionAnimation = {
+  // 1. Variants define the animation states (what it looks like)
+  const sectionVariants: Variants = {
     initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.6, ease: 'easeOut' },
+    whileInView: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
+    },
+  };
+
+  // 2. Viewport defines when the animation triggers
+  const sectionViewport = {
+    once: true,
+    amount: 0.2
   };
 
   return (
-    <motion.div {...sectionAnimation}>
+    // 3. Apply variants and viewport as separate props
+    <motion.div 
+      variants={sectionVariants}
+      initial="initial"
+      whileInView="whileInView"
+      viewport={sectionViewport}
+    >
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-800">Our Specialized Products</h2>
@@ -37,7 +52,7 @@ const Products = () => {
 
             {/* Card 2: Local Lead Bot */}
             <div className="bg-gray-50 p-8 rounded-lg border text-left flex flex-col">
-              <h3 className="text-2xl font-semibold text-gray-900">Local Lead Bot</h3>
+              <h3 className="text-2xl font-semibold text-gray-800">Local Lead Bot</h3>
               <p className="mt-1 text-indigo-600 font-medium">For Plumbers & Contractors</p>
               <p className="mt-4 text-gray-600 flex-grow">
                 Capture every lead, even after hours. Our chatbot qualifies potential customers and books service calls automatically.
