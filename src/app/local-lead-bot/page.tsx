@@ -1,4 +1,3 @@
-// src/app/local-lead-bot/page.tsx
 'use client'
 
 import Image from 'next/image'
@@ -44,7 +43,6 @@ export default function LocalLeadBotPage() {
           >
             Local Lead Bot is your 24/7 dispatcher, capturing and qualifying leads from your website so you never lose a job to voicemail.
           </motion.p>
-          {/* --- NEW BUTTON ADDED HERE --- */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -71,9 +69,9 @@ export default function LocalLeadBotPage() {
         className="py-20 bg-white"
       >
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-800">Can't Answer the Phone on a Job?</h2>
+          <h2 className="text-4xl font-bold text-gray-800">Can&apos;t Answer the Phone on a Job?</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-            You're busy providing expert service. Potential customers who get your voicemail are already calling your competition.
+            You&apos;re busy providing expert service. Potential customers who get your voicemail are already calling your competition.
           </p>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center text-center">
@@ -109,7 +107,7 @@ export default function LocalLeadBotPage() {
             </div>
             <div className="p-8 bg-white rounded-lg border">
               <h3 className="text-2xl font-bold text-indigo-600">02. Qualify</h3>
-              <p className="mt-2 text-gray-500">It asks key questions about the service needed and the customer's location to see if they're a good fit.</p>
+              <p className="mt-2 text-gray-500">It asks key questions about the service needed and the customer&apos;s location to see if they&apos;re a good fit.</p>
             </div>
             <div className="p-8 bg-white rounded-lg border">
               <h3 className="text-2xl font-bold text-indigo-600">03. Convert</h3>
