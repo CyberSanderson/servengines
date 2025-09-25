@@ -1,7 +1,8 @@
 // src/app/page.tsx
 'use client'; 
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
+// ... (all your component imports)
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import VisualFeature from '@/components/VisualFeature';
@@ -12,28 +13,86 @@ import Founder from '@/components/Founder';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 
+
 export default function Home() {
-  // This is the full animation object
-  const sectionAnimation = {
+  // 1. Define the animation variants WITHOUT viewport
+  const sectionVariants: Variants = {
     initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.6, ease: 'easeOut' },
+    whileInView: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+    },
+  };
+
+  // 2. Define the viewport settings separately
+  const sectionViewport = {
+    once: true, 
+    amount: 0.2 
   };
 
   return (
     <main>
       <Hero />
-      <motion.div {...sectionAnimation}><Services /></motion.div>
-      <motion.div {...sectionAnimation}><VisualFeature /></motion.div>
-      <motion.div {...sectionAnimation}><HowItWorks /></motion.div>
+      
+      {/* 3. Apply both variants and viewport as separate props */}
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <Services />
+      </motion.div>
+      
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <VisualFeature />
+      </motion.div>
+
+      {/* ... Repeat for all other motion.div wrappers ... */}
       
       <Products />
 
-      <motion.div {...sectionAnimation}><Pricing /></motion.div>
-      <motion.div {...sectionAnimation}><Founder /></motion.div>
-      <motion.div {...sectionAnimation}><Testimonials /></motion.div>
-      <motion.div {...sectionAnimation}><CTA /></motion.div>
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <Pricing />
+      </motion.div>
+
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <Founder />
+      </motion.div>
+
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <Testimonials />
+      </motion.div>
+
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <CTA />
+      </motion.div>
     </main>
   );
 }
