@@ -23,7 +23,7 @@ const Founder = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white shadow-lg flex-shrink-0 overflow-hidden">
             {/* NOTE: You will need to replace this image with your own headshot */}
-            <Image src="/sande-headshot.png" alt="Founder of Servengines" width={256} height={256} className="w-full h-full object-cover" />
+            <Image src="/sanderson.png" alt="Founder of Servengines" width={256} height={256} className="w-full h-full object-cover" />
           </div>
           <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold text-gray-800">From a Builder to a Business Owner</h2>
