@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script"; // Import the Script component
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -24,6 +25,24 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        
+        {/* Google Analytics Scripts */}
+        <Script 
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-KXHBTLLD09" 
+        />
+        <Script 
+          id="google-analytics" 
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-KXHBTLLD09');
+          `}
+        </Script>
       </body>
     </html>
   );
