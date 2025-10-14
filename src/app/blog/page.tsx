@@ -7,7 +7,7 @@ export default function BlogPage() {
   return (
     <div className="bg-white py-12">
       <div className="container mx-auto px-6">
-        <h1 className="text-5xl font-bold text-center mb-12">The Ariah Desk Blog</h1>
+        <h1 className="text-5xl font-bold text-center mb-12">Servengines Blog</h1>
         <div className="max-w-3xl mx-auto space-y-8">
           {allPostsData.map(({ id, title, excerpt }) => (
             <div key={id} className="border-b pb-8">

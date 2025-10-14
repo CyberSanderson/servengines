@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2 text-left">
               <h2 className="text-4xl font-bold text-gray-800">Our Story</h2>
               <p className="mt-4 text-lg text-gray-600">
-                {`My name is Sande, and I'm the founder of Servengines. I started this agency after seeing countless local business owners—masters of their craft—struggle to keep up with the fast-paced digital world. They had incredible services but were held back by outdated websites or no online presence at all.`}
+                {`My name is Sanderson, and I'm the founder of Servengines. I started this agency after seeing countless local business owners, masters of their craft struggle to keep up with the fast-paced digital world. They had incredible services but were held back by outdated websites or no online presence at all.`}
               </p>
               <p className="mt-4 text-lg text-gray-600">
                 {`With a background in full-stack development, I knew I could bridge that gap. I wanted to build more than just websites; I wanted to build growth engines. That means creating professional, high-performance sites that convert visitors and integrating smart AI tools that automate tasks and capture leads 24/7.`}

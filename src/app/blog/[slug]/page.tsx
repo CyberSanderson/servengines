@@ -40,10 +40,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
         {/* Final CTA */}
         <div className="text-center mt-12 p-8 bg-teal-50 rounded-lg">
-          <h3 className="text-2xl font-bold">Ready to End No-Shows for Good?</h3>
+          <h3 className="text-2xl font-bold">Ready to Build Your Digital Growth Engine?</h3>
           <p className="mt-2">
-            See how Ariah Desk can transform your booking process and give you
-            back your time. Check out our{' '}
+            A powerful website or an AI chatbot can transform your business. 
+            If you're ready to see real results, let's have a conversation.{' '}
             <Link href="/#pricing" className="text-teal-600 font-semibold">
               simple, transparent pricing plans
             </Link>{' '}
@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             href="/login"
             className="mt-6 inline-block px-8 py-3 bg-yellow-500 text-white font-semibold rounded-full shadow-lg hover:bg-yellow-600 transition-colors"
           >
-            Start Your Free Trial
+            Get a Free Consultation
           </Link>
         </div>
       </div>
