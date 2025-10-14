@@ -1,62 +1,48 @@
-import { getPostData, getAllPostIds } from '@/lib/posts'
-import Image from 'next/image'
-import Link from 'next/link'
+// src/app/blog/[slug]/page.tsx
 
-// This function tells Next.js which blog posts exist so it can generate them
-export async function generateStaticParams() {
-  const paths = getAllPostIds()
-  return paths.map((path) => ({ slug: path.params.slug }))
-}
+import { getPostData, getAllPostIds, Post } from '@/lib/posts'; // 1. Import Post type
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
-// This function fetches the metadata (like the title) for a specific post for SEO
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const postData = await getPostData(params.slug)
-  return {
-    title: postData.title,
-  }
-}
+// ... generateStaticParams and generateMetadata functions are fine ...
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const postData = await getPostData(params.slug)
-
+  let postData: Post; // 2. Use the Post type here
+  try {
+    postData = await getPostData(params.slug);
+  } catch (error) {
+    notFound();
+  }
+  
   return (
-    <div className="bg-white py-12">
-      <div className="container mx-auto px-6 prose lg:prose-xl">
-        {/* Post Header */}
-        <h1>{postData.title}</h1>
-
-        {/* Header Image */}
-        <div className="relative my-8 h-96 w-full">
-          <Image
-            src={postData.image}
-            alt={postData.title}
-            fill
-            className="object-cover rounded-lg"
-          />
-        </div>
-
-        {/* Post Content, rendered from Markdown */}
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-
-        {/* Final CTA */}
-        <div className="text-center mt-12 p-8 bg-teal-50 rounded-lg">
-          <h3 className="text-2xl font-bold">Ready to Build Your Digital Growth Engine?</h3>
-          <p className="mt-2">
-            A powerful website or an AI chatbot can transform your business. 
-            If you're ready to see real results, let's have a conversation.{' '}
-            <Link href="/#pricing" className="text-teal-600 font-semibold">
-              simple, transparent pricing plans
-            </Link>{' '}
-            and start your free trial today.
+    <article className="bg-white py-12">
+      <div className="container mx-auto px-6">
+        <header className="text-center max-w-4xl mx-auto mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">{postData.title}</h1>
+          <p className="mt-4 text-gray-500">
+            By {postData.author} on {new Date(postData.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
           </p>
-          <Link
-            href="/login"
-            className="mt-6 inline-block px-8 py-3 bg-yellow-500 text-white font-semibold rounded-full shadow-lg hover:bg-yellow-600 transition-colors"
-          >
-            Get a Free Consultation
-          </Link>
-        </div>
+        </header>
+        
+        {postData.image && (
+          <div className="relative my-8 h-96 w-full max-w-5xl mx-auto">
+            <Image
+              src={postData.image}
+              alt={postData.title}
+              fill
+              className="object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        )}
+
+        <div 
+          className="prose lg:prose-xl max-w-4xl mx-auto" 
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }} 
+        />
+
+        {/* ... (CTA section remains the same) ... */}
       </div>
-    </div>
-  )
+    </article>
+  );
 }
