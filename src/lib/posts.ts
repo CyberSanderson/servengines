@@ -10,23 +10,34 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-// This function can remain the same
-export function getSortedPostsData() {
+// This is the shared type for our blog posts
+export type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  author: string;
+  image?: string;
+  contentHtml: string;
+};
+
+export function getSortedPostsData(): Omit<Post, 'contentHtml'>[] {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
+
     return {
       slug,
       ...(matterResult.data as { title: string; date: string; excerpt: string; author: string }),
     };
   });
+
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-// This function can also remain the same
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => ({
@@ -34,8 +45,7 @@ export function getAllPostIds() {
   }));
 }
 
-// This is the updated function that fixes the links
-export async function getPostData(slug: string) {
+export async function getPostData(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
@@ -43,15 +53,17 @@ export async function getPostData(slug: string) {
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkHtml, { sanitize: false })
-    .use(rehypeSlug) // Adds IDs to headings
-    .use(rehypeAutolinkHeadings) // Makes headings clickable
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
     .process(matterResult.content);
   
   const contentHtml = processedContent.toString();
 
+  // THIS IS THE CORRECTED PART
+  // We use our specific Post type fields instead of a generic 'any'
   return {
     slug,
     contentHtml,
-    ...(matterResult.data as { [key: string]: any }),
+    ...(matterResult.data as { title: string; date: string; excerpt: string; author: string; image?: string }),
   };
 }
