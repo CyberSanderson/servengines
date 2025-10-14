@@ -1,17 +1,35 @@
 // src/app/blog/[slug]/page.tsx
 
-import { getPostData, getAllPostIds, Post } from '@/lib/posts'; // 1. Import Post type
+import { getPostData, getAllPostIds } from '@/lib/posts';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-// ... generateStaticParams and generateMetadata functions are fine ...
+// generateStaticParams IS NEEDED for Next.js to know which pages to build
+export async function generateStaticParams() {
+  const paths = getAllPostIds();
+  return paths.map((path) => ({ slug: path.params.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  try {
+    const postData = await getPostData(params.slug);
+    return {
+      title: postData.title,
+      description: postData.excerpt,
+    };
+  } catch { // We don't need to use the 'error' variable here
+    return {
+      title: 'Post Not Found',
+    };
+  }
+}
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  let postData: Post; // 2. Use the Post type here
+  let postData;
   try {
     postData = await getPostData(params.slug);
-  } catch (error) {
+  } catch { // We don't need to use the 'error' variable here
     notFound();
   }
   
@@ -41,7 +59,20 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           dangerouslySetInnerHTML={{ __html: postData.contentHtml || '' }} 
         />
 
-        {/* ... (CTA section remains the same) ... */}
+        {/* The CTA now uses a Link component, so it must be imported */}
+        <div className="text-center mt-16 p-8 bg-slate-50 rounded-lg max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-900">Ready to Build Your Digital Growth Engine?</h3>
+          <p className="mt-2 text-gray-600">
+            A powerful website or an AI chatbot can transform your business. 
+            If you&apos;re ready to see real results, let&apos;s have a conversation.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-6 inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
+          >
+            Get a Free Consultation
+          </Link>
+        </div>
       </div>
     </article>
   );
