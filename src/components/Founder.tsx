@@ -28,9 +28,9 @@ const Founder = () => {
           <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold text-gray-800">From a Builder to a Business Owner</h2>
             <p className="mt-4 text-lg text-gray-600">
-              &quot;I started Servengines because I saw countless local businesses with incredible products and services struggling to compete online. My mission is to provide powerful, accessible digital tools—websites that convert and AI that assists—to help you focus on what you do best.&quot;
+              &quot;I started Servengines because I saw countless local businesses with incredible products and services struggling to compete online. My mission is to provide powerful, accessible digital tools, websites that convert and AI that assists to help you focus on what you do best.&quot;
             </p>
-            <p className="mt-4 font-semibold text-gray-800">Sande, Founder of Servengines</p>
+            <p className="mt-4 font-semibold text-gray-800">Sanderson, Founder of Servengines</p>
           </div>
         </div>
       </div>
