@@ -16,14 +16,6 @@ This guide reveals the full blueprint to transform your local business website i
 
 ---
 
-## 🧭 Table of Contents
-1. [The Leaky Bucket Problem](#the-leaky-bucket-problem)
-2. [Building the Chassis](#building-the-chassis)
-3. [Installing the Engine](#installing-the-engine)
-4. [The Digital Growth Engine in Action](#the-digital-growth-engine-in-action)
-
----
-
 ## 🪣 Part 1: The Leaky Bucket Problem
 
 ### The “Digital Brochure” Mindset is Costing You Money
@@ -41,14 +33,14 @@ Most small businesses treat their website like a digital flyer — static and ig
 
 ### The 5-Second Rule: Nailing Your Homepage
 In 5 seconds, your homepage must communicate: What you offer, who it’s for, and the next step.
-<img src="https://images.unsplash.com/photo-1600880292089-90e6a1a8d8ad?auto=format&fit=crop&w=1200&q=80" alt="Website hero section mockup" style="border-radius: 8px;" />
+
 
 ### The Currency of Trust: Social Proof & Authenticity
 Trust is the new currency. Build it with real client testimonials, team photos, and a transparent “About Us” story.
 
 ### Every Page is a Sales Page: Mastering the CTA
 Every page needs multiple Calls to Action (CTAs). Add them to your header, hero section, after your services list, and in your footer.
-<img src="https://images.unsplash.com/photo-1611606063069-68679c9639b2?auto=format&fit=crop&w=1200&q=80" alt="CTA button examples" style="border-radius: 8px;" />
+
 
 ---
 
