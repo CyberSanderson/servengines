@@ -4,6 +4,7 @@
 import { motion, Variants } from 'framer-motion';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio'; // 1. Import the new component
 import VisualFeature from '@/components/VisualFeature';
 import HowItWorks from '@/components/HowItWorks';
 import Products from '@/components/Products';
@@ -41,6 +42,10 @@ export default function Home() {
         <Services />
       </motion.div>
       
+      {/* --- PORTFOLIO SECTION ADDED HERE --- */}
+      <Portfolio />
+      {/* ------------------------------------ */}
+      
       <motion.div 
         variants={sectionVariants}
         initial="initial"
@@ -50,7 +55,6 @@ export default function Home() {
         <VisualFeature />
       </motion.div>
 
-      {/* --- THIS SECTION WAS MISSING --- */}
       <motion.div 
         variants={sectionVariants}
         initial="initial"
@@ -59,7 +63,6 @@ export default function Home() {
       >
         <HowItWorks />
       </motion.div>
-      {/* --------------------------------- */}
       
       <Products />
 
