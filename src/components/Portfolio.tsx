@@ -38,7 +38,7 @@ const Portfolio = () => {
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group">
               <div className="relative h-64">
                 <Image
-                  src="/lux-beauty-portfolio.png"
+                  src="/lux.png"
                   alt="Screenshot of the Lux Beauty salon website"
                   fill
                   className="object-cover object-top"
