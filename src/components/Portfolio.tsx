@@ -6,19 +6,8 @@ import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 
 const Portfolio = () => {
-  const sectionVariants: Variants = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
-    },
-  };
-
-  const sectionViewport = {
-    once: true,
-    amount: 0.2
-  };
+  const sectionVariants: Variants = { /* ... */ };
+  const sectionViewport = { /* ... */ };
 
   return (
     <motion.div
@@ -36,34 +25,28 @@ const Portfolio = () => {
           <div className="mt-12 max-w-2xl mx-auto">
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group">
               
-              {/* --- RESPONSIVE IMAGE SECTION --- */}
+              {/* --- NEW RESPONSIVE IMAGE SECTION --- */}
               <div className="relative h-64 md:h-80">
-                {/* Mobile Image: Only shows on small screens */}
-                <div className="md:hidden">
-                  <Image
-                    src="/lux-mobile.png"
-                    alt="Mobile screenshot of the Lux Beauty salon website"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-
-                {/* Desktop Image: Only shows on medium screens and up */}
-                <div className="hidden md:block">
-                  <Image
-                    src="/lux-desktop.png"
-                    alt="Desktop screenshot of the Lux Beauty salon website"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
+                {/* We use two Image components and control visibility with CSS classes */}
+                <Image
+                  src="/lux-mobile.png"
+                  alt="Mobile screenshot of the Lux Beauty salon website"
+                  fill
+                  className="object-cover object-top md:hidden" // Hide on medium screens and up
+                />
+                <Image
+                  src="/lux-desktop.png"
+                  alt="Desktop screenshot of the Lux Beauty salon website"
+                  fill
+                  className="object-cover object-top hidden md:block" // Hide by default, show on medium and up
+                />
               </div>
-              {/* ----------------------------- */}
+              {/* ------------------------------------ */}
 
               <div className="p-6 text-left">
                 <h3 className="text-2xl font-semibold text-gray-900">Lux Beauty Salon</h3>
                 <p className="mt-2 text-gray-600">
-                  A custom-designed concept for a high-end beauty salon, demonstrating a seamless user experience for service booking and e-commerce. This project showcases our expertise in creating beautiful, intuitive interfaces that cater to the luxury beauty market.
+                  A custom-designed concept for a high-end beauty salon...
                 </p>
                 <a
                   href="https://lux-beauty-mu.vercel.app/"
