@@ -15,7 +15,7 @@ const MobileNav = ({ onClose }: MobileNavProps) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+      className="fixed inset-0 bg-black bg-opacity-50 z-[1000] md:hidden"
       onClick={handleLinkClick}
     >
       {/* --- Animated Sidebar --- */}
@@ -24,10 +24,10 @@ const MobileNav = ({ onClose }: MobileNavProps) => {
         animate={{ x: 0 }}
         exit={{ x: '100%' }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
-        className="fixed top-0 right-0 h-screen w-64 bg-white shadow-lg p-6 z-50 overflow-y-auto"
+        className="fixed top-0 right-0 h-screen w-64 bg-white shadow-lg p-6 z-[1100] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <nav className="flex flex-col space-y-6 text-lg text-gray-800">
+        <nav className="flex flex-col space-y-6 text-lg text-gray-800 mt-8">
           <Link
             href="/about"
             onClick={handleLinkClick}
