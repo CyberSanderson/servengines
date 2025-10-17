@@ -31,19 +31,35 @@ const Portfolio = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-800">Our Work</h2>
           <p className="mt-4 text-lg text-gray-600">
-            {/* THIS IS THE CORRECTED LINE */}
             A look at some of the solutions we&apos;ve built for our clients.
           </p>
           <div className="mt-12 max-w-2xl mx-auto">
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group">
-              <div className="relative h-64">
-                <Image
-                  src="/lux.png"
-                  alt="Screenshot of the Lux Beauty salon website"
-                  fill
-                  className="object-cover object-top"
-                />
+              
+              {/* --- RESPONSIVE IMAGE SECTION --- */}
+              <div className="relative h-64 md:h-80">
+                {/* Mobile Image: Only shows on small screens */}
+                <div className="md:hidden">
+                  <Image
+                    src="/lux-mobile.jpg"
+                    alt="Mobile screenshot of the Lux Beauty salon website"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+
+                {/* Desktop Image: Only shows on medium screens and up */}
+                <div className="hidden md:block">
+                  <Image
+                    src="/lux-desktop.png"
+                    alt="Desktop screenshot of the Lux Beauty salon website"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
               </div>
+              {/* ----------------------------- */}
+
               <div className="p-6 text-left">
                 <h3 className="text-2xl font-semibold text-gray-900">Lux Beauty Salon</h3>
                 <p className="mt-2 text-gray-600">

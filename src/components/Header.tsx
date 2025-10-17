@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileNav from './MobileNav';
+import MobileNav from './MobileNav'; // This line imports the component above
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ const Header = () => {
           
           <nav className="hidden md:flex space-x-6 text-gray-600">
             <Link href="/about" className="hover:text-indigo-600">About</Link>
-            <Link href="/blog" className="hover:text-indigo-600">Blog</Link> {/* <-- Link Added Here */}
+            <Link href="/blog" className="hover:text-indigo-600">Blog</Link>
             <Link href="/ariah-desk" className="hover:text-indigo-600">Ariah Desk</Link>
             <Link href="/local-lead-bot" className="hover:text-indigo-600">Local Lead Bot</Link>
             <Link href="/contact" className="hover:text-indigo-600">Contact</Link>
@@ -42,7 +42,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {/* Remember to also add the 'Blog' link to your MobileNav.tsx component */}
       {isMenuOpen && <MobileNav onClose={toggleMenu} />}
     </>
   );
