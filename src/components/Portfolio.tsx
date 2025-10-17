@@ -41,7 +41,7 @@ const Portfolio = () => {
                 {/* Mobile Image: Only shows on small screens */}
                 <div className="md:hidden">
                   <Image
-                    src="/lux-mobile.jpg"
+                    src="/lux-mobile.png"
                     alt="Mobile screenshot of the Lux Beauty salon website"
                     fill
                     className="object-cover object-top"
