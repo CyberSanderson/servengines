@@ -1,49 +1,111 @@
-// src/components/MobileNav.tsx
 'use client'
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion'; // 1. Added missing import
+import React, { useState } from 'react'
+import Link from 'next/link'
 
-// 2. Added the missing type definition
 type MobileNavProps = {
-  onClose: () => void;
-};
+  onClose: () => void
+}
 
-const MobileNav = ({ onClose }: MobileNavProps) => {
-  const handleLinkClick = () => {
-    onClose();
-  };
+const MobileNav: React.FC<MobileNavProps> = ({ onClose }) => {
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const toggleProducts = () => setIsProductsOpen(!isProductsOpen)
 
   return (
-    <div 
-      className="fixed inset-0 bg-black bg-opacity-50 z-[1000] md:hidden" 
-      onClick={handleLinkClick}
-    >
-      <motion.div
-        // 3. Added the missing animation props
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
-        exit={{ x: '100%' }}
-        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 z-[1100]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <nav className="flex flex-col space-y-6 text-lg text-gray-800 mt-8">
-          <Link href="/about" onClick={handleLinkClick} className="hover:text-indigo-600">About</Link>
-          <Link href="/blog" onClick={handleLinkClick} className="hover:text-indigo-600">Blog</Link>
-          
-          <div className="pl-4 border-l-2 border-gray-200">
-            <p className="text-sm font-bold text-gray-500 uppercase mb-2">Products</p>
-            <Link href="/ariah-desk" onClick={handleLinkClick} className="block mb-4 hover:text-indigo-600">Ariah Desk</Link>
-            <Link href="/local-lead-bot" onClick={handleLinkClick} className="block hover:text-indigo-600">Local Lead Bot</Link>
-          </div>
-          
-          <Link href="/contact" onClick={handleLinkClick} className="hover:text-indigo-600">Contact</Link>
-        </nav>
-      </motion.div>
-    </div>
-  );
-};
+    <>
+      {/* Dark semi-transparent backdrop */}
+      <div
+        className="fixed inset-0 bg-black bg-opacity-30 z-40"
+        onClick={onClose}
+      ></div>
 
-export default MobileNav;
+      {/* Right-side slide-in menu */}
+      <div className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white shadow-xl z-50 flex flex-col transform transition-transform duration-300 ease-out">
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b">
+          <h2 className="text-lg font-semibold text-gray-800">Menu</h2>
+          <button onClick={onClose} aria-label="Close menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 text-gray-800"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-col space-y-2 px-6 py-4 text-gray-700">
+          <Link href="/about" onClick={onClose} className="hover:text-indigo-600">
+            About
+          </Link>
+          <Link href="/blog" onClick={onClose} className="hover:text-indigo-600">
+            Blog
+          </Link>
+
+          {/* Products Dropdown */}
+          <div>
+            <button
+              onClick={toggleProducts}
+              className="w-full flex justify-between items-center py-2 hover:text-indigo-600 focus:outline-none"
+            >
+              <span>Products</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className={`w-5 h-5 transition-transform duration-200 ${
+                  isProductsOpen ? 'rotate-180' : 'rotate-0'
+                }`}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 9l6 6 6-6"
+                />
+              </svg>
+            </button>
+
+            {/* Collapsible Content */}
+            <div
+              className={`pl-4 flex flex-col overflow-hidden transition-all duration-300 ${
+                isProductsOpen ? 'max-h-40' : 'max-h-0'
+              }`}
+            >
+              <Link
+                href="/ariah-desk"
+                onClick={onClose}
+                className="py-2 hover:text-indigo-600"
+              >
+                Ariah Desk
+              </Link>
+              <Link
+                href="/local-lead-bot"
+                onClick={onClose}
+                className="py-2 hover:text-indigo-600"
+              >
+                Local Lead Bot
+              </Link>
+            </div>
+          </div>
+
+          <Link href="/contact" onClick={onClose} className="hover:text-indigo-600">
+            Contact
+          </Link>
+        </nav>
+      </div>
+    </>
+  )
+}
+
+export default MobileNav
