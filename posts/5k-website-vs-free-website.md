@@ -3,7 +3,7 @@ title: "Why a $5,000 Website is Often Cheaper Than a 'Free' One"
 slug: '5k-website-vs-free-website'
 excerpt: "The true cost of a website isn't the price tag; it's the return on investment. This definitive guide breaks down the hidden costs of 'free' DIY websites and reveals why a professional build is the most profitable investment for a serious local business."
 date: '2025-10-19'
-author: 'Sande'
+author: 'Sanderson'
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
 ---
 
