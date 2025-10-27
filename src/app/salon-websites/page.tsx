@@ -1,12 +1,12 @@
 // src/app/salon-websites/page.tsx
-'use client' // Needed for potential future interactive elements or animations
+'use client' 
 
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 
-// Reusable Checkmark Icon (similar to Pricing component)
+// THIS COMPONENT DEFINITION WAS INCOMPLETE
 const CheckmarkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-indigo-600 mr-2 flex-shrink-0">
       <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.052-.143Z" clipRule="evenodd" />
@@ -14,7 +14,6 @@ const CheckmarkIcon = () => (
 );
 
 export default function SalonWebsitesPage() {
-    // Animation Variants (optional, but good for consistency)
     const sectionVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
         visible: { 
@@ -82,11 +81,11 @@ export default function SalonWebsitesPage() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
              <div className="p-6 bg-white rounded-lg border shadow-sm">
                 <h3 className="font-semibold text-gray-900">❌ Lost Bookings</h3>
-                <p className="mt-2 text-sm text-gray-600">Confusing navigation or a hidden "Book Now" button means lost revenue.</p>
+                <p className="mt-2 text-sm text-gray-600">Confusing navigation or a hidden &quot;Book Now&quot; button means lost revenue.</p>
              </div>
              <div className="p-6 bg-white rounded-lg border shadow-sm">
                 <h3 className="font-semibold text-gray-900">❌ Poor Mobile Experience</h3>
-                <p className="mt-2 text-sm text-gray-600">Over 60% of clients browse on their phone. If it's clunky, they'll leave.</p>
+                <p className="mt-2 text-sm text-gray-600">Over 60% of clients browse on their phone. If it&apos;s clunky, they&apos;ll leave.</p>
              </div>
              <div className="p-6 bg-white rounded-lg border shadow-sm">
                 <h3 className="font-semibold text-gray-900">❌ Wasted Time in DMs</h3>
@@ -106,7 +105,7 @@ export default function SalonWebsitesPage() {
              <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800">The Servengines Solution: Websites That Work</h2>
                 <p className="mt-4 text-lg text-gray-600">
-                    We don't just build websites; we build growth engines specifically for salons and spas. Our sites are designed to attract high-value clients and make your life easier.
+                    We don&apos;t just build websites; we build growth engines specifically for salons and spas. Our sites are designed to attract high-value clients and make your life easier.
                 </p>
                 <ul className="mt-6 space-y-4">
                     <li className="flex items-start"><CheckmarkIcon /><span>**Stunning Custom Design:** Reflects the quality and style of your brand.</span></li>
