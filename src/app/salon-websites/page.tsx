@@ -1,12 +1,12 @@
 // src/app/salon-websites/page.tsx
-'use client' 
+'use client'
 
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 
-// THIS COMPONENT DEFINITION WAS INCOMPLETE
+// Reusable Checkmark Icon
 const CheckmarkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-indigo-600 mr-2 flex-shrink-0">
       <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.052-.143Z" clipRule="evenodd" />
@@ -14,12 +14,13 @@ const CheckmarkIcon = () => (
 );
 
 export default function SalonWebsitesPage() {
+    // Animation Variants
     const sectionVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
-        visible: { 
-          opacity: 1, 
+        visible: {
+          opacity: 1,
           y: 0,
-          transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
+          transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
         },
     };
     const sectionViewport = { once: true, amount: 0.2 };
@@ -30,8 +31,8 @@ export default function SalonWebsitesPage() {
       <section className="relative flex flex-col items-center justify-center min-h-[60vh] text-center text-white p-8 overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
-            src="https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=2070&auto=format&fit=crop"
-            alt="Elegant salon interior background"
+            src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=1974&auto=format&fit=crop"
+            alt="Luxurious and modern empty salon interior with chairs and mirrors"
             fill
             className="object-cover"
             priority
@@ -116,7 +117,7 @@ export default function SalonWebsitesPage() {
              </div>
              <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
                  <Image
-                    src="/lux-desktop.png" // Use your desktop screenshot
+                    src="/happy.jpg" // Use your desktop screenshot
                     alt="Desktop view of a modern salon website"
                     fill
                     className="object-cover object-top"
@@ -188,8 +189,8 @@ export default function SalonWebsitesPage() {
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
             Let&apos;s build a stunning, high-performance website that attracts your dream clients and simplifies your business. Get your free, no-obligation quote today.
           </p>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="mt-8 inline-block px-10 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
           >
             Get a Free Quote
