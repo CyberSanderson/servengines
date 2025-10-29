@@ -8,10 +8,10 @@ import { motion, Variants } from 'framer-motion';
 const Pricing = () => {
   const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
     },
   };
   const sectionViewport = { once: true, amount: 0.2 };
@@ -35,21 +35,23 @@ const Pricing = () => {
         <h2 className="text-4xl font-bold text-gray-800">Smart Packages for Your Business</h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Choose the perfect solution to launch and grow your business online.</p>
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          
-          {/* Tier 1: Starter Site Package */}
+
+          {/* Tier 1: Starter Site Package --- UPDATED CONTENT BELOW --- */}
           <div className="p-8 bg-white rounded-lg border shadow-md flex flex-col">
-            <h3 className="text-2xl font-semibold text-gray-800">Starter Site Package</h3>
-            <p className="mt-2 text-gray-500">Get your professional site online.</p>
+            <h3 className="text-2xl font-semibold text-gray-800">Starter Site: Your Essential Online Foundation</h3>
+            <p className="mt-2 text-gray-500">Launch your professional web presence quickly and affordably. Perfect for getting found, looking credible, and capturing your first online leads.</p>
             <p className="mt-6 text-4xl font-bold">$997 - $1,497</p>
             <p className="text-sm text-gray-500">(one-time project)</p>
             <ul className="mt-6 space-y-3 text-left flex-grow">
-              <li className="flex items-center"><CheckmarkIcon /><span>Up to 5 Pages (Home, Services, etc.)</span></li>
-              <li className="flex items-center"><CheckmarkIcon /><span>Booking Form/Calendar Integration</span></li>
-              <li className="flex items-center"><CheckmarkIcon /><span>Mobile-First Responsive Design</span></li>
-              <li className="flex items-center"><CheckmarkIcon /><span>Local SEO Setup (Google Profile)</span></li>
+              <li className="flex items-start"><CheckmarkIcon /><span>Professional 5-Page Website (Home, About, Services, etc.)</span></li>
+              <li className="flex items-start"><CheckmarkIcon /><span>Instant Lead Capture (Booking/Contact Form)</span></li>
+              <li className="flex items-start"><CheckmarkIcon /><span>Flawless Mobile Experience</span></li>
+              <li className="flex items-start"><CheckmarkIcon /><span>Local Google Visibility Setup (GMB)</span></li>
+              <li className="flex items-start"><CheckmarkIcon /><span>Built by Experts, Not Templates</span></li>
             </ul>
             <Link href="/contact" className="mt-8 block w-full px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 text-center">Get Started</Link>
           </div>
+          {/* --- END OF UPDATED TIER 1 --- */}
 
           {/* Tier 2: Business Pro Package (Best Value) */}
           <div className="p-8 bg-white rounded-lg border-2 border-indigo-600 shadow-xl flex flex-col relative">
