@@ -359,12 +359,4 @@ Let’s build something that works while you sleep.
 *Written by ServEngines — We build fast, modern, client-booking websites for small businesses and local brands.*
 `;
 
-export default function Page() {
-  return (
-    <article className="max-w-4xl mx-auto px-6 py-12">
-      <div className="prose prose-lg prose-indigo dark:prose-invert max-w-none">
-        <ReactMarkdown>{markdown}</ReactMarkdown>
-      </div>
-    </article>
-  );
-}
+
