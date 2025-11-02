@@ -1,6 +1,6 @@
 ---
 title: "Why a $5,000 Website Is Cheaper Than a 'Free' One: The Real ROI of Professional Web Design (2025 Guide)"
-slug: "5k-website-vs-free-website"
+slug: "free-website-vs-professional-website"
 excerpt: "Behind every 'free' website hides lost sales, wasted time, and invisible brand damage. This 2025 guide exposes the hidden costs of DIY web builders and shows why a $5,000 professional site is the smartest investment a business can make."
 date: "2025-11-02"
 author: "Sanderson"
