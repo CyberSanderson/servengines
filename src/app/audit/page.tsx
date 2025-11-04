@@ -2,12 +2,8 @@
 'use client'; 
 
 import React, { useState } from 'react';
-import { sendEmail } from '@/app/actions'; // We'll reuse our existing server action
-import { Metadata } from 'next';
-
-// Note: Metadata in client components is handled differently, 
-// but for a simple page, this is fine. 
-// We'd typically put this in a layout.tsx if the page grew.
+import { sendEmail } from '@/app/actions'; 
+// We removed 'import { Metadata } from 'next';' from here, as it was unused.
 
 export default function AuditPage() {
   const [formData, setFormData] = useState({
@@ -31,7 +27,6 @@ export default function AuditPage() {
     setIsSubmitting(true); 
     setResponseMessage('');
 
-    // We'll map our form data to what the sendEmail action expects
     const emailData = {
       name: formData.name,
       email: formData.email,
@@ -66,6 +61,7 @@ export default function AuditPage() {
         {/* Form Section */}
         <div className="mt-16">
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* ... (your form inputs remain the same) ... */}
             <div>
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">Full Name</label>
               <div className="mt-2.5"> 

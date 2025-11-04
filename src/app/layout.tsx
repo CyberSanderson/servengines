@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script"; // Keep this import
+import Script from "next/script";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -26,7 +26,6 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         
-        {/* --- ADD THESE SCRIPT BLOCKS BACK --- */}
         {/* Google Analytics Scripts */}
         <Script 
           strategy="afterInteractive"
@@ -62,8 +61,11 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
+        
         {/* NoScript fallback for Meta Pixel */}
         <noscript>
+          {/* We're disabling the Next.js image warnings for this specific line */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             height="1" 
             width="1" 
@@ -72,7 +74,6 @@ export default function RootLayout({
             alt="" 
           />
         </noscript>
-        {/* --- END SCRIPT BLOCKS --- */}
         
       </body>
     </html>
