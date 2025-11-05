@@ -27,7 +27,7 @@ const Hero = () => {
           className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl"
         >
           You sell knowledge, trust, and results. We craft credibility-driven websites and AI-powered systems
-          that position you as the obvious choice—backed by Harvard/IBM-certified expertise.
+          that position you as the obvious choice, backed by Harvard/IBM-certified expertise.
         </motion.p>
 
         {/* --- UPDATED CTA (SINGLE BUTTON) --- */}
