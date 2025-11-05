@@ -16,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-3xl"
         >
-          Build a Website That Reflects Your Expertise—and Books More Clients.
+          Build a Website That Reflects Your Expertise and Books More Clients.
         </motion.h1>
 
         {/* Subheadline */}

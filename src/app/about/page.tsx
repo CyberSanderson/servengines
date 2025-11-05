@@ -5,12 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-// Reusable Checkmark Icon
-const CheckmarkIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-indigo-600 mr-2 flex-shrink-0">
-      <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.052-.143Z" clipRule="evenodd" />
-    </svg>
-);
+// ✅ Removed unused CheckmarkIcon (wasn’t referenced anywhere)
 
 export default function AboutPage() {
   return (
@@ -49,7 +44,7 @@ export default function AboutPage() {
               className="w-full md:w-1/2"
             >
               <Image
-                src="/CEO.png" // Your professional "blue shirt" photo
+                src="/CEO.png"
                 alt="Sanderson, Founder of Servengines"
                 width={500}
                 height={500}
@@ -59,7 +54,7 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2 text-left">
               <h2 className="text-4xl font-bold text-gray-800">The Story Behind Servengines</h2>
               <p className="mt-4 text-lg text-gray-600">
-                My name is Sanderson, and I&apos;m the founder of Servengines. I started this agency after seeing countless brilliant consultants, coaches, and service professionals struggle with outdated, "brochure" websites that did nothing to build trust.
+                My name is Sanderson, and I&apos;m the founder of Servengines. I started this agency after seeing countless brilliant consultants, coaches, and service professionals struggle with outdated, &quot;brochure&quot; websites that did nothing to build trust.
               </p>
               <p className="mt-4 text-lg text-gray-600">
                 They were experts, but their online presence made them look like amateurs.
@@ -102,7 +97,7 @@ export default function AboutPage() {
         </div>
       </motion.section>
 
-      {/* 4. Final CTA (Aligned with new funnel) */}
+      {/* 4. Final CTA */}
       <section className="py-20 bg-gray-800 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold">Ready to Build Your Digital HQ?</h2>
