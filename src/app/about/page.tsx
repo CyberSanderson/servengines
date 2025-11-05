@@ -1,8 +1,16 @@
+// src/app/about/page.tsx
 'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+
+// Reusable Checkmark Icon
+const CheckmarkIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-indigo-600 mr-2 flex-shrink-0">
+      <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.052-.143Z" clipRule="evenodd" />
+    </svg>
+);
 
 export default function AboutPage() {
   return (
@@ -16,7 +24,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-5xl md:text-6xl font-bold text-gray-800"
           >
-            Empowering Local Businesses Through Technology
+            We Build the Trust Your Expertise Deserves.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -24,7 +32,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-600"
           >
-            {`Servengines was founded on the belief that every local business deserves a powerful digital presence. We build the tools you need to compete, grow, and succeed in the modern marketplace.`}
+            You&apos;re an expert in your field. We&apos;re experts in building the digital tools that prove it to the world, build credibility, and get you clients.
           </motion.p>
         </div>
       </section>
@@ -41,41 +49,71 @@ export default function AboutPage() {
               className="w-full md:w-1/2"
             >
               <Image
-                src="/sanderson.png"
-                alt="Sande, Founder of Servengines"
+                src="/CEO.png" // Your professional "blue shirt" photo
+                alt="Sanderson, Founder of Servengines"
                 width={500}
                 height={500}
                 className="rounded-lg shadow-2xl object-cover"
               />
             </motion.div>
             <div className="w-full md:w-1/2 text-left">
-              <h2 className="text-4xl font-bold text-gray-800">Our Story</h2>
+              <h2 className="text-4xl font-bold text-gray-800">The Story Behind Servengines</h2>
               <p className="mt-4 text-lg text-gray-600">
-                {`My name is Sanderson, and I'm the founder of Servengines. I started this agency after seeing countless local business owners, masters of their craft struggle to keep up with the fast-paced digital world. They had incredible services but were held back by outdated websites or no online presence at all.`}
+                My name is Sanderson, and I&apos;m the founder of Servengines. I started this agency after seeing countless brilliant consultants, coaches, and service professionals struggle with outdated, "brochure" websites that did nothing to build trust.
               </p>
               <p className="mt-4 text-lg text-gray-600">
-                {`With a background in full-stack development, I knew I could bridge that gap. I wanted to build more than just websites; I wanted to build growth engines. That means creating professional, high-performance sites that convert visitors and integrating smart AI tools that automate tasks and capture leads 24/7.`}
+                They were experts, but their online presence made them look like amateurs.
               </p>
               <p className="mt-4 text-lg text-gray-600">
-                {`Our mission is to handle your digital heavy lifting, so you can get back to doing what you love.`}
+                As a Harvard-certified full-stack developer, I knew I could fix this. I founded Servengines not just to build websites, but to build credibility engines. We craft digital platforms that reflect the true quality of your expertise and automate your client acquisition.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Final CTA */}
-      <section className="bg-gray-800 py-20 text-white text-center">
+      {/* 3. Our Services Section */}
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 bg-gray-50"
+      >
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          <h2 className="text-4xl font-bold text-gray-800">What We Do</h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+            We offer three levels of partnership to turn your expertise into a scalable digital business.
+          </p>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="p-8 bg-white rounded-lg border">
+              <h3 className="text-xl font-semibold text-gray-800">Credibility Websites</h3>
+              <p className="mt-2 text-gray-500">Professional, fast, and secure websites that build instant trust and guide visitors to book a consultation.</p>
+            </div>
+            <div className="p-8 bg-white rounded-lg border">
+              <h3 className="text-xl font-semibold text-gray-800">AI Automation Systems</h3>
+              <p className="mt-2 text-gray-500">We integrate AI chatbots and automated workflows to handle your FAQs, qualify leads, and schedule clients 24/7.</p>
+            </div>
+            <div className="p-8 bg-white rounded-lg border">
+              <h3 className="text-xl font-semibold text-gray-800">Custom App Development</h3>
+              <p className="mt-2 text-gray-500">We turn your unique process or expertise into a full-stack, scalable software application (like our AI Habit Coach).</p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* 4. Final CTA (Aligned with new funnel) */}
+      <section className="py-20 bg-gray-800 text-white text-center">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold">{`Let's Build Something Great Together`}</h2>
+          <h2 className="text-4xl font-bold">Ready to Build Your Digital HQ?</h2>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-            {`Ready to take your business to the next level? We're here to help. Get in touch for a free, no-obligation consultation.`}
+            It starts with a simple conversation. Let&apos;s find out what&apos;s holding your current website back.
           </p>
           <Link
-            href="/contact"
+            href="/audit"
             className="mt-8 inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
           >
-            Get a Free Quote
+            Get Your Free Credibility Audit
           </Link>
         </div>
       </section>
