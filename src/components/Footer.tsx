@@ -1,23 +1,62 @@
 // src/components/Footer.tsx
 import React from 'react';
-import Link from 'next/link'; // Make sure Link is imported
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-6 text-center">
-        <div className="mb-4">
-          <Link href="/privacy-policy" className="mx-3 text-gray-400 hover:text-white">
-            Privacy Policy
-          </Link>
-          <span className="text-gray-500">|</span>
-          <Link href="/terms-of-service" className="mx-3 text-gray-400 hover:text-white">
-            Terms of Service
-          </Link>
+    <footer className="bg-gray-800 text-white">
+      <div className="container mx-auto px-6 py-12">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
+          
+          {/* Column 1: Brand & Social */}
+          <div className="flex flex-col items-center sm:items-start mb-8 sm:mb-0">
+            <Link href="/" className="text-2xl font-bold text-white hover:text-gray-300">
+              Servengines
+            </Link>
+            <p className="text-gray-400 text-sm mt-1">
+              Digital Growth Engines for Service Professionals.
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <a 
+                href="https://www.linkedin.com/in/sanderson-labousse-web-developer/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div className="text-center sm:text-right">
+            <h3 className="text-lg font-semibold text-white">Navigate</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link>
+              </li>
+              <li>
+                <Link href="/audit" className="text-gray-400 hover:text-white transition-colors">Get Your Free Audit</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p>&copy; {currentYear} Servengines. All Rights Reserved.</p>
+
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+          <p>&copy; {currentYear} Servengines. All Rights Reserved. | <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link> | <Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link></p>
+        </div>
       </div>
     </footer>
   );
