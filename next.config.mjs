@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
     domains: [
       'www.pixelchefs.com',
@@ -23,10 +24,15 @@ const nextConfig = {
       'textdrip.com',
       'brandlume.com',
       'semify.com',
+      'images.unsplash.com', // ✅ Added Unsplash here
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
-  reactStrictMode: true,
 };
 
-// ✅ Correct ESM export
 export default nextConfig;
