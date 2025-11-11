@@ -3,7 +3,7 @@ title: "The Rise of Autonomous AI: From Reactive Tools to Intelligent Systems"
 excerpt: "AI is evolving from reactive tools into autonomous systems that can plan, act, and adapt. Discover how multi-agent architectures are redefining the future of automation."
 date: 2025-11-11
 author: "ServEngines Editorial"
-image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
+
 tags: ["AI Agents", "Automation", "Technology", "Artificial Intelligence"]
 ---
 
