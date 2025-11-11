@@ -76,7 +76,13 @@
     <priority>0.6</priority>
   </url>
 
-
+  <!-- 🆕 Newly added AI blog post -->
+  <url>
+    <loc>https://www.servengines.com/blog/the-rise-of-autonomous-ai</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <url>
     <loc>https://www.servengines.com/privacy-policy</loc>
