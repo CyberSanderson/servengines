@@ -23,11 +23,9 @@ const Testimonials = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 bg-gray-50 rounded-lg border text-left">
             <p className="text-gray-600">
-              {`"The new website is a night-and-day difference. We're getting more online orders than ever, and customers are complimenting the new design."`}
+              &quot;From the very beginning, they were incredibly helpful, professional, and attentive to every detail. They took the time to understand my vision and turned it into a beautiful, functional website that perfectly represents my brand.&quot;
             </p>
-            <p className="mt-4 font-semibold text-gray-800">
-              - Jane D., Owner of The Corner Bistro
-            </p>
+            <p className="mt-4 font-semibold text-gray-800">- Ana, Founder of Docs by Ana</p>
           </div>
           <div className="p-8 bg-gray-50 rounded-lg border text-left">
             <p className="text-gray-600">
