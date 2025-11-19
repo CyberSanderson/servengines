@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion'; // <-- THIS LINE WAS MISSING
+import { motion, Variants } from 'framer-motion';
 
 const Portfolio = () => {
   const sectionVariants: Variants = {
@@ -72,31 +72,33 @@ const Portfolio = () => {
               </div>
             </div>
 
-            {/* --- Client Acquisition System (SaaS) --- */}
+            {/* --- PROJECT 2: SENTIENT CRM (SaaS APP) --- */}
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group flex flex-col">
-              <div className="md:hidden">
-                  <Image
-                    src="/cas-mobile.png" 
-                    alt="Mobile screenshot of client acquisition system"
-                    fill
+              <div className="relative h-64 md:h-80">
+                <div className="md:hidden">
+                  <Image 
+                    src="/sentient-mobile.png" // <-- Your new screenshot
+                    alt="Mobile screenshot of Sentient CRM app" 
+                    fill 
                     className="object-cover object-top"
                   />
                 </div>
-              <div className="relative h-96"> 
-                <Image 
-                  src="/cas-desktop.png" 
-                  alt="Desktop screenshot of client acquisition system" 
-                  fill 
-                  className="object-cover object-top"
-                />
+                <div className="hidden md:block">
+                  <Image 
+                    src="/sentient-desktop.png" // <-- Your new screenshot
+                    alt="Desktop screenshot of Sentient CRM app" 
+                    fill 
+                    className="object-cover object-top"
+                  />
+                </div>
               </div>
               <div className="p-6 text-left flex flex-col flex-grow">
-                <h3 className="text-2xl font-semibold text-gray-900">Client Acquisition System (SaaS)</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Sentient CRM (SaaS Prototype)</h3>
                 <p className="mt-2 text-gray-600 flex-grow">
-                  A full-stack SaaS application to help agencies and coaches automate lead generation, featuring a complete marketing funnel and AI-powered nurturing.
+                  A full-stack, AI-driven Sales CRM designed to automate lead scoring, pipeline management, and personalized client follow-ups for agencies and consultants.
                 </p>
                 <a
-                  href="https://client-acquisition-system.vercel.app/"
+                  href="https://sentient-crm.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-block text-indigo-600 font-semibold hover:text-indigo-800"
