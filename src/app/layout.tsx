@@ -10,8 +10,48 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Servengines | Websites & AI Chatbots for Local Businesses",
-  description: "We build high-performance websites and AI-powered chatbots to help your local business thrive online.",
+  // 1. The Title: This is what shows up in the Google Tab
+  // We shifted from "Local Business" to "Service Professionals"
+  title: "Websites & AI Automation for Service Professionals | Servengines",
+  
+  // 2. The Description: This is the gray text under the link on Google.
+  // We explicitly name the niches (Real Estate, Tax, Coaches) to catch those searches.
+  description: "Automate client intake and build authority. We create high-converting websites and AI chatbots for Real Estate Agents, Tax Professionals, and Coaches.",
+  
+  // 3. Keywords: These help Google understand your relevance.
+  keywords: [
+    "Web design for tax professionals",
+    "Real estate AI chatbot",
+    "Website builder for consultants",
+    "Automated client onboarding",
+    "AI receptionist for small business",
+    "Servengines",
+    "Document prep website design"
+  ],
+
+  // 4. Open Graph: This controls how your link looks when shared on Facebook/LinkedIn
+  openGraph: {
+    title: "Stop Chasing Leads. Let AI Book Them.",
+    description: "Custom websites and AI receptionists that qualify leads and book appointments for professional service providers.",
+    url: "https://www.servengines.com",
+    siteName: "Servengines",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: '/og-image.jpg', // Make sure you have an image at public/og-image.jpg
+        width: 1200,
+        height: 630,
+        alt: 'Servengines Dashboard Preview',
+      },
+    ],
+  },
+
+  // 5. Robots: Ensures Google is allowed to index your site
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

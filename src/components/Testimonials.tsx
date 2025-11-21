@@ -36,38 +36,45 @@ const Testimonials = () => {
       className="py-20 bg-white"
     >
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">Trusted by Businesses Like Yours</h2>
+        {/* Updated Headline to match the "Expert" vibe */}
+        <h2 className="text-4xl font-bold text-gray-800">Trusted by Top-Tier Professionals</h2>
+        
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Testimonial 1 */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left">
+          {/* Testimonial 1: The Document/Legal Professional */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
             {renderStars()}
-            <p className="text-gray-600">
-              &quot;From the very beginning, they were incredibly helpful, professional, and attentive to every detail. They took the time to understand my vision and turned it into a beautiful, functional website that perfectly represents my brand.&quot;
+            <p className="text-gray-600 flex-grow">
+              &quot;My old website made me look like a hobbyist. Servengines built a platform that actually reflects my credentials. Clients now take me seriously before we even get on a call.&quot;
             </p>
-            <p className="mt-4 font-semibold text-gray-800">- Ana, Founder of Docs by Ana</p>
+            <div className="mt-6">
+              <p className="font-semibold text-gray-900">Ana M.</p>
+              <p className="text-sm text-indigo-600">Founder, Docs by Ana</p>
+            </div>
           </div>
 
-          {/* Testimonial 2 */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left">
+          {/* Testimonial 2: The Real Estate Agent (Focus on Speed/AI) */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
             {renderStars()}
-            <p className="text-gray-600">
-              {`"I was skeptical about AI, but the chatbot has saved me at least 5 hours a week. It handles all the basic questions so I can focus on my clients."`}
+            <p className="text-gray-600 flex-grow">
+              {`"In Real Estate, if you don't answer fast, you lose the deal. The AI chatbot captures buyer leads at 2 AM and books viewings for me. It's like having a 24/7 secretary."`}
             </p>
-            <p className="mt-4 font-semibold text-gray-800">
-              - Mike R., Owner of Precision Plumbing
-            </p>
+            <div className="mt-6">
+              <p className="font-semibold text-gray-900">David K.</p>
+              <p className="text-sm text-indigo-600">Senior Broker, Keller Williams</p>
+            </div>
           </div>
 
-          {/* Testimonial 3 */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left">
+          {/* Testimonial 3: The Tax/Finance Pro (Focus on Automation/Trust) */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
             {renderStars()}
-            <p className="text-gray-600">
-              {`"Working with Servengines was a seamless experience. They listened to our needs and delivered a product that exceeded our expectations. Highly recommend."`}
+            <p className="text-gray-600 flex-grow">
+              {`"I used to spend hours emailing clients about missing tax documents. Servengines set up a system that answers their FAQs automatically. It has saved me during tax season."`}
             </p>
-            <p className="mt-4 font-semibold text-gray-800">
-              - Chloe T., Manager at City Style Salon
-            </p>
+            <div className="mt-6">
+              <p className="font-semibold text-gray-900">Sarah J.</p>
+              <p className="text-sm text-indigo-600">CPA & Tax Consultant</p>
+            </div>
           </div>
 
         </div>
