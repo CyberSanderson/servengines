@@ -93,7 +93,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="p-6 text-left flex flex-col flex-grow">
-                <h3 className="text-2xl font-semibold text-gray-900">Sentient CRM (SaaS Prototype)</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Sentient CRM (Intelligent SaaS)</h3>
                 <p className="mt-2 text-gray-600 flex-grow">
                   A full-stack, AI-driven Sales CRM designed to automate lead scoring, pipeline management, and personalized client follow-ups for agencies and consultants.
                 </p>
