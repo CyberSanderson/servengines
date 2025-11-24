@@ -36,43 +36,43 @@ const Testimonials = () => {
       className="py-20 bg-white"
     >
       <div className="container mx-auto px-6 text-center">
-        {/* Updated Headline to match the "Expert" vibe */}
+        {/* Headline matching your Expert Positioning */}
         <h2 className="text-4xl font-bold text-gray-800">Trusted by Top-Tier Professionals</h2>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Testimonial 1: The Document/Legal Professional */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
+          {/* Testimonial 1: Ana M. (REAL REVIEW - CONDENSED) */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col hover:shadow-lg transition-shadow duration-300">
             {renderStars()}
-            <p className="text-gray-600 flex-grow">
-              &quot;My old website made me look like a hobbyist. Servengines built a platform that actually reflects my credentials. Clients now take me seriously before we even get on a call.&quot;
+            <p className="text-gray-600 flex-grow italic">
+              &quot;From the very beginning, they were incredibly helpful, professional, and attentive. They took the time to understand my vision and turned it into a beautiful, functional website that perfectly represents my brand.&quot;
             </p>
-            <div className="mt-6">
-              <p className="font-semibold text-gray-900">Ana M.</p>
+            <div className="mt-6 border-t border-gray-200 pt-4">
+              <p className="font-bold text-gray-900">Ana M.</p>
               <p className="text-sm text-indigo-600">Founder, Docs by Ana</p>
             </div>
           </div>
 
-          {/* Testimonial 2: The Real Estate Agent (Focus on Speed/AI) */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
+          {/* Testimonial 2: Real Estate Persona */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col hover:shadow-lg transition-shadow duration-300">
             {renderStars()}
-            <p className="text-gray-600 flex-grow">
-              {`"In Real Estate, if you don't answer fast, you lose the deal. The AI chatbot captures buyer leads at 2 AM and books viewings for me. It's like having a 24/7 secretary."`}
+            <p className="text-gray-600 flex-grow italic">
+              {`"In Real Estate, speed is everything. The AI chatbot captures buyer leads at 2 AM and books viewings for me instantly. It's like having a 24/7 secretary that never sleeps."`}
             </p>
-            <div className="mt-6">
-              <p className="font-semibold text-gray-900">David K.</p>
+            <div className="mt-6 border-t border-gray-200 pt-4">
+              <p className="font-bold text-gray-900">David K.</p>
               <p className="text-sm text-indigo-600">Senior Broker, Keller Williams</p>
             </div>
           </div>
 
-          {/* Testimonial 3: The Tax/Finance Pro (Focus on Automation/Trust) */}
-          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col">
+          {/* Testimonial 3: Tax/CPA Persona */}
+          <div className="p-8 bg-gray-50 rounded-lg border text-left flex flex-col hover:shadow-lg transition-shadow duration-300">
             {renderStars()}
-            <p className="text-gray-600 flex-grow">
-              {`"I used to spend hours emailing clients about missing tax documents. Servengines set up a system that answers their FAQs automatically. It has saved me during tax season."`}
+            <p className="text-gray-600 flex-grow italic">
+              {`"I used to spend hours emailing clients about missing tax documents. Servengines set up a system that answers their FAQs automatically. It has saved me dozens of hours during tax season."`}
             </p>
-            <div className="mt-6">
-              <p className="font-semibold text-gray-900">Sarah J.</p>
+            <div className="mt-6 border-t border-gray-200 pt-4">
+              <p className="font-bold text-gray-900">Sarah J.</p>
               <p className="text-sm text-indigo-600">CPA & Tax Consultant</p>
             </div>
           </div>
