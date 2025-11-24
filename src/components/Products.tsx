@@ -43,7 +43,7 @@ const Products = () => {
               </p>
               {/* CHANGED: Uses Link to go to internal demo page */}
               <Link 
-                href="/products/sentient-crm"
+                href="https://sentient-crm.vercel.app/"
                 className="mt-6 inline-block text-indigo-600 font-semibold hover:text-indigo-800"
               >
                 View Live Platform &rarr;
