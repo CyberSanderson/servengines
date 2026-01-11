@@ -10,22 +10,21 @@ const Hero = () => {
     <section className="bg-white text-gray-900">
       <div className="container mx-auto flex flex-col items-center px-6 py-24 text-center">
         
-        {/* Headline with Metallic Gradient */}
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 max-w-5xl"
-          >
-            Websites + AI Systems for 
-            {/* The "bg-clip-text" class creates the shiny metal effect */}
-            <span className="bg-gradient-to-r from-gold-500 via-yellow-300 to-gold-500 bg-clip-text text-transparent px-2">
-              Document Preparers, Coaches & Agents
-            </span>
-            <br className="hidden md:block" /> 
-            That Book Clients Automatically.
-          </motion.h1>
+        {/* Headline - Niche Focused */}
+        
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 max-w-5xl"
+            >
+              Websites + AI Systems for <span className="text-gold-500">Document Preparers, Coaches & Agents</span>
+              <br className="hidden md:block" /> 
+              That Book Clients Automatically.
+            </motion.h1>
+        
 
+        {/* Subheadline - Outcome Focused */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +35,7 @@ const Hero = () => {
           that capture attention and turn visitors into booked appointments—backed by Harvard & IBM-certified expertise.
         </motion.p>
 
-        {/* Tags with Gold styling */}
+        {/* "Ideal For" Tag List - Visual reinforcement of the niche */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -49,13 +48,13 @@ const Hero = () => {
           <span className="text-gray-900 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">Real Estate Agents</span>
         </motion.div>
 
+        {/* --- CTA (High Contrast & Clear Value) --- */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-col items-center"
         >
-          {/* Button uses the new Navy via 'bg-indigo-600' */}
           <Link 
             href="/audit"
             className="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hover:bg-indigo-700 transition duration-300 text-xl shadow-xl hover:shadow-indigo-200"
@@ -68,6 +67,7 @@ const Hero = () => {
           </span>
         </motion.div>
 
+        {/* Trust Bar / Credentials */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -78,8 +78,7 @@ const Hero = () => {
           <span className="hidden md:inline text-gray-300">|</span> 
           <span className="mx-4">IBM AI credentials</span> 
           <span className="hidden md:inline text-gray-300">|</span> 
-          {/* Gold Guarantee */}
-          <span className="mx-4 font-semibold text-gold-500">30-Day Satisfaction Promise</span>
+          <span className="mx-4 font-semibold text-indigo-600">30-Day Satisfaction Promise</span>
         </motion.div>
       </div>
     </section>
