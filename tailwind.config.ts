@@ -1,4 +1,3 @@
-// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // REPLACE THE DEFAULT INDIGO WITH "EXECUTIVE NAVY"
+        // OVERRIDE: Changes all "indigo" classes to this Deep Navy
+        // This instantly makes your buttons and accents look "Executive"
         indigo: {
           50: '#f0f4f8',
           100: '#d9e2ec',
@@ -18,15 +18,15 @@ const config: Config = {
           300: '#9fb3c8',
           400: '#829ab1',
           500: '#627d98', 
-          600: '#0f172a', // <--- Your new Primary Brand Color (Deep Navy)
+          600: '#0f172a', // Main Buttons/Links will be this dark navy
           700: '#334e68',
           800: '#243b53',
           900: '#102a43',
         },
-        // ADD A GOLD ACCENT FOR BUTTONS OR HIGHLIGHTS
+        // NEW: Adds Gold for accents
         gold: {
-          500: '#d97706', // Use 'text-gold-500' or 'bg-gold-500'
-          600: '#b45309', // Hover state
+          500: '#d97706', // Amber-600 equivalent
+          600: '#b45309',
         }
       },
     },
