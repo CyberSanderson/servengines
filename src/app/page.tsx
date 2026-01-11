@@ -4,7 +4,7 @@
 import { motion, Variants } from 'framer-motion';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import Portfolio from '@/components/Portfolio'; // 1. Import the new component
+import Portfolio from '@/components/Portfolio';
 import VisualFeature from '@/components/VisualFeature';
 import HowItWorks from '@/components/HowItWorks';
 import Products from '@/components/Products';
@@ -12,6 +12,7 @@ import Pricing from '@/components/Pricing';
 import Founder from '@/components/Founder';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
+import TrustSeal from '@/components/TrustSeal'; // 1. Import the TrustSeal
 
 
 export default function Home() {
@@ -42,9 +43,7 @@ export default function Home() {
         <Services />
       </motion.div>
       
-      {/* --- PORTFOLIO SECTION ADDED HERE --- */}
       <Portfolio />
-      {/* ------------------------------------ */}
       
       <motion.div 
         variants={sectionVariants}
@@ -74,6 +73,17 @@ export default function Home() {
       >
         <Pricing />
       </motion.div>
+
+      {/* --- TRUST SEAL PLACED HERE TO REMOVE FRICTION BEFORE CONVERSION --- */}
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={sectionViewport}
+      >
+        <TrustSeal />
+      </motion.div>
+      {/* ------------------------------------------------------------------ */}
 
       <motion.div 
         variants={sectionVariants}

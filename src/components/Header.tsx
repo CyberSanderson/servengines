@@ -25,7 +25,7 @@ const Header = () => {
               width={180}
               height={40}
               priority
-              className="w-auto h-8" // Ensures responsive sizing
+              className="w-auto h-8" 
             />
           </Link>
 
@@ -60,9 +60,9 @@ const Header = () => {
                 </svg>
               </button>
 
+              {/* Dropdown Menu */}
               {isProductsOpen && (
                 <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-lg shadow-xl py-2 animate-in fade-in slide-in-from-top-2">
-                  {/* Product 1: Real Estate */}
                   <a
                     href="https://sentient-crm.vercel.app/"
                     target="_blank"
@@ -73,7 +73,6 @@ const Header = () => {
                     <p className="text-xs text-gray-500">For Real Estate Agents</p>
                   </a>
                   
-                  {/* Product 2: Professional Services */}
                   <a
                     href="https://www.docsbyana.com/"
                     target="_blank"
@@ -87,12 +86,12 @@ const Header = () => {
               )}
             </div>
 
-            {/* CTA Button instead of plain Contact link */}
+            {/* --- THE FIX: Pointing to /audit instead of /contact --- */}
             <Link 
-              href="/contact" 
-              className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+              href="/audit" 
+              className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm font-bold"
             >
-              Book Audit
+              Book Free Audit
             </Link>
           </nav>
 
