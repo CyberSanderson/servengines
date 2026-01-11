@@ -10,17 +10,21 @@ const Hero = () => {
     <section className="bg-white text-gray-900">
       <div className="container mx-auto flex flex-col items-center px-6 py-24 text-center">
         
-        {/* Headline - Uses Gold for the Niche */}
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 max-w-5xl"
-        >
-          Websites + AI Systems for <span className="text-gold-500">Document Preparers, Coaches & Agents</span>
-          <br className="hidden md:block" /> 
-          That Book Clients Automatically.
-        </motion.h1>
+        {/* Headline with Metallic Gradient */}
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 max-w-5xl"
+          >
+            Websites + AI Systems for 
+            {/* The "bg-clip-text" class creates the shiny metal effect */}
+            <span className="bg-gradient-to-r from-gold-500 via-yellow-300 to-gold-500 bg-clip-text text-transparent px-2">
+              Document Preparers, Coaches & Agents
+            </span>
+            <br className="hidden md:block" /> 
+            That Book Clients Automatically.
+          </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
