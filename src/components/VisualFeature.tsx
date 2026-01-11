@@ -24,15 +24,13 @@ const VisualFeature = () => {
           Business Engines for <span className="text-indigo-600">Serious Growth</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          We don't just build "pretty" sites. We deploy automated lead-scoring and 
+          We don&apos;t just build &quot;pretty&quot; sites. We deploy automated lead-scoring and 
           CRM systems that manage your sales pipeline while you focus on your clients.
         </p>
         
         <div className="mt-12 max-w-2xl mx-auto">
           <div className="relative group">
-            {/* PRO TIP: Replace "/sentient-desktop.png" with a clear 
-              screenshot of your Sentient CRM dashboard. 
-            */}
+            {/* Make sure /sentient-desktop.png exists in your public folder */}
             <Image
               src="/sentient-desktop.png"
               alt="Sentient CRM Sales Pipeline Dashboard"
@@ -41,7 +39,6 @@ const VisualFeature = () => {
               className="rounded-2xl shadow-[0_20px_50px_rgba(79,70,229,0.15)] border border-gray-200 transition-transform duration-500 group-hover:scale-[1.01]"
             />
             
-            {/* Overlay Caption for extra context */}
             <div className="mt-6 flex justify-center gap-8 text-sm font-medium text-gray-500">
               <span className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div> Real-time Tracking
