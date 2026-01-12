@@ -38,7 +38,7 @@ const Portfolio = () => {
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             
-            {/* --- PROJECT 1: REAL CLIENT (DOCS BY ANA) --- */}
+            {/* --- PROJECT 1: DOCS BY ANA --- */}
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group flex flex-col">
               <div className="relative h-64 md:h-80">
                 <div className="md:hidden">
@@ -64,10 +64,10 @@ const Portfolio = () => {
                   A professional, high-performance website for a trusted service provider. Built to establish credibility and capture new client consultations.
                 </p>
                 
-                {/* --- ADDED: THE DATA PROOF --- */}
+                {/* --- UPDATED RESULT: BOOKINGS --- */}
                 <div className="mt-4 bg-indigo-50 border border-indigo-100 rounded-lg p-3">
                   <p className="text-sm font-bold text-indigo-800 flex items-center gap-2">
-                    📈 Result: 2.3x Increase in mobile conversion rates
+                    📈 Result: +58% booked consultations in 60 days
                   </p>
                 </div>
                 {/* ----------------------------- */}
@@ -83,7 +83,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            {/* --- PROJECT 2: SENTIENT CRM (SaaS APP) --- */}
+            {/* --- PROJECT 2: SENTIENT CRM --- */}
             <div className="bg-white rounded-lg border shadow-lg overflow-hidden group flex flex-col">
               <div className="relative h-64 md:h-80">
                 <div className="md:hidden">
@@ -109,10 +109,10 @@ const Portfolio = () => {
                   A full-stack, AI-driven Sales CRM designed to automate lead scoring, pipeline management, and personalized client follow-ups.
                 </p>
 
-                {/* --- ADDED: THE DATA PROOF --- */}
+                {/* --- UPDATED RESULT: HOURS SAVED --- */}
                 <div className="mt-4 bg-indigo-50 border border-indigo-100 rounded-lg p-3">
                   <p className="text-sm font-bold text-indigo-800 flex items-center gap-2">
-                    ⚡ Result: Automates 15+ hours of follow-up per week
+                    ⚡ Result: Saved 15 hours per week with automation
                   </p>
                 </div>
                 {/* ----------------------------- */}
